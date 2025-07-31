@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoFlow - Beautiful Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">Todo<span class="accent">Flow</span></h1>
+                <p class="subtitle">Stay organized and productive</p>
+            </div>
+
+            <!-- Main Container -->
+            <div class="main-container">
+                <!-- Add Todo Section -->
+                <div class="add-section">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <input type="text" id="todoInput" placeholder="Add a new task..." class="todo-input">
+                            <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                        <button id="addBtn" class="add-btn">Add</button>
+                    </div>
+                </div>
+
+                <!-- Search and Filter Section -->
+                <div class="controls-section">
+                    <div class="controls-wrapper">
+                        <!-- Search -->
+                        <div class="search-wrapper">
+                            <input type="text" id="searchInput" placeholder="Search tasks..." class="search-input">
+                            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Filter Buttons -->
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="active">Active</button>
+                            <button class="filter-btn" data-filter="completed">Completed</button>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="stats">
+                        <span id="statsText">0 active, 0 completed</span>
+                        <button id="clearCompleted" class="clear-btn" style="display: none;">Clear completed</button>
+                    </div>
+                </div>
+
+                <!-- Todo List -->
+                <div class="todo-list-container">
+                    <div id="todoList" class="todo-list"></div>
+                    <div id="emptyState" class="empty-state">
+                        <svg class="empty-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                        </svg>
+                        <p class="empty-title">No tasks found</p>
+                        <p class="empty-subtitle">Add your first task to get started!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Built with HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
